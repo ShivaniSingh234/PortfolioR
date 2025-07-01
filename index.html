@@ -13,6 +13,16 @@
       content="width=device-width, initial-scale=1, user-scalable=no"
     />
     <link rel="stylesheet" href="assets/css/main.css" />
+    <style>
+  .item:hover {
+    box-shadow: 0 0 15px 4px rgba(255, 215, 0, 0.6); /* glowing gold effect */
+    transform: scale(1.03);
+    transition: all 0.3s ease-in-out;
+  }
+</style>
+
+</style>
+
   </head>
   <body class="is-preload">
     <!-- Header -->
@@ -21,10 +31,12 @@
         <!-- Logo -->
         <div id="logo">
           <span class="image avatar48"
-            ><img src="image.jpg" alt=""
+            ><img src="images/image.jpg" alt=""
           /></span>
           <h1 id="title">SHIVANI</h1>
           <p>Graduate Developer Trainee</p>
+          <button id="changeTitle" style="margin-top:10px;">Change Title</button>
+            <!-- <button id="glowProjects" style="margin-top:10px;"></button> -->
         </div>
 
         <!-- Nav -->
@@ -117,7 +129,7 @@
           </header>
 
           <footer>
-            <a href="#portfolio" class="button scrolly">Cartella</a>
+            <!-- <a href="#portfolio" class="button scrolly">Cartella</a> -->
           </footer>
         </div>
       </section>
@@ -141,7 +153,7 @@
             <div class="col-4 col-12-mobile">
               <article class="item">
                 <a href="#" class="image fit"
-                  ><img src="images.jpeg" alt=""
+                  ><img src="images/images.jpeg" alt=""
                 /></a>
                 <header>
                   <h3>Truss Bridge</h3>
@@ -150,7 +162,7 @@
               <article class="item">
                 <a href="#" class="image fit"
                   ><img
-                    src="fuselage-design-of-an-rc-plane-2-320.webp"
+                    src="images/fuselage-design-of-an-rc-plane-2-320.webp"
                     alt=""
                 /></a>
                 <header>
@@ -167,7 +179,7 @@
               </article>
               <article class="item">
                 <a href="#" class="image fit"
-                  ><img src="Image.jpg" alt=""
+                  ><img src="images/Image.jpg" alt=""
                 /></a>
                 <header>
                   <h3>Myself</h3>
@@ -177,7 +189,7 @@
             <div class="col-4 col-12-mobile">
               <article class="item">
                 <a href="#" class="image fit"
-                  ><img src="mental_health_2.jpg" alt=""
+                  ><img src="images/mental_health_2.jpg" alt=""
                 /></a>
                 <header>
                   <h3>Debate</h3>
@@ -185,7 +197,7 @@
               </article>
               <article class="item">
                 <a href="#" class="image fit"
-                  ><img src="download (1).png" alt=""
+                  ><img src="images/download (1).png" alt=""
                 /></a>
                 <header>
                   <h3>Projects</h3>
@@ -206,7 +218,7 @@
 
           <a href="#" class="image featured">
             <img
-              src="wimage.jpg"
+              src="images/wimage.jpg"
               alt=""
               style="
                 width: 100%;
@@ -295,7 +307,7 @@
             email or connect with me on LinkedIn or GitHub. Looking forward to
             hearing from you!
           </p>
-
+          <form method="POST" action="https://formspree.io/f/YOUR_ID">
           <form method="post" action="#">
             <div class="row">
               <div class="col-6 col-12-mobile">
@@ -312,6 +324,7 @@
                   required
                 ></textarea>
               </div>
+              <input type="hidden" name="_captcha" value="false">
               <div class="col-12">
                 <input type="submit" value="Send Message" />
               </div>
@@ -338,5 +351,26 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+    <script>
+  $(document).ready(function () {
+    $('#changeTitle').on('click', function () {
+      $('#title').text('SHIVANI - Web Developer');
+    });
+  });
+</script>
+<script>
+  $(document).ready(function () {
+    // Change title on click
+    $('#changeTitle').on('click', function () {
+      $('#title').text('SHIVANI - Web Developer');
+    });
+
+    // Add glow effect to portfolio items on hover
+    $('#glowProjects').on('click', function () {
+      $('.item').addClass('glow-on-hover');
+    });
+  });
+</script>
+
   </body>
 </html>
